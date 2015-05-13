@@ -5,12 +5,13 @@ var Obj = {
 	flagMove : 0,
 	flagStay : 0
 };
+var cav = $(".canvas");
+
 
 function GIF(location,speed){
 	var IMG = new Array();
 	var WIDTH = section.width();
 	var HEIGHT = section.height();
-	var cav = $(".canvas");
 
 	var step = parseInt(location * WIDTH / (15 * speed) );
 	var j = 0;
