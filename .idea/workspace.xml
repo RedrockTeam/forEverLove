@@ -50,8 +50,8 @@
           <file leaf-file-name="animation.css" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/animation.css">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="-1.916293" vertical-offset="4450" max-vertical-offset="5940">
-                  <caret line="1380" column="5" selection-start-line="1380" selection-start-column="5" selection-end-line="1380" selection-end-column="5" />
+                <state vertical-scroll-proportion="0.51718986" vertical-offset="4450" max-vertical-offset="5940">
+                  <caret line="2235" column="1" selection-start-line="2235" selection-start-column="1" selection-end-line="2235" selection-end-column="1" />
                   <folding>
                     <element signature="e#0#121#0" expanded="false" />
                     <element signature="e#122#248#0" expanded="false" />
@@ -241,21 +241,21 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="index.less" pinned="false" current-in-tab="true">
+          <file leaf-file-name="index.less" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/index.less">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.1724138" vertical-offset="726" max-vertical-offset="15774">
+                <state vertical-scroll-proportion="-3.548387" vertical-offset="726" max-vertical-offset="15774">
                   <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="gif.js" pinned="false" current-in-tab="false">
+          <file leaf-file-name="gif.js" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/gif.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2398">
-                  <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
+                <state vertical-scroll-proportion="0.44095665" vertical-offset="1817" max-vertical-offset="2486">
+                  <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
                   <folding />
                 </state>
               </provider>
@@ -273,11 +273,11 @@
         <option value="$PROJECT_DIR$/img/animation.css" />
         <option value="$PROJECT_DIR$/animation.less" />
         <option value="D:/My Documents/Tencent Files/492994082/FileRecv/gif.js" />
-        <option value="$PROJECT_DIR$/gif.js" />
         <option value="$PROJECT_DIR$/animation.css" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/index.less" />
+        <option value="$PROJECT_DIR$/gif.js" />
       </list>
     </option>
   </component>
@@ -2645,14 +2645,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gif.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="726" max-vertical-offset="2398">
-          <caret line="48" column="34" selection-start-line="48" selection-start-column="34" selection-end-line="48" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.4" vertical-offset="0" max-vertical-offset="242">
@@ -2669,10 +2661,18 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.548387" vertical-offset="726" max-vertical-offset="15774">
+          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/animation.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.916293" vertical-offset="4450" max-vertical-offset="5940">
-          <caret line="1380" column="5" selection-start-line="1380" selection-start-column="5" selection-end-line="1380" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.51718986" vertical-offset="4450" max-vertical-offset="5940">
+          <caret line="2235" column="1" selection-start-line="2235" selection-start-column="1" selection-end-line="2235" selection-end-column="1" />
           <folding>
             <element signature="e#0#121#0" expanded="false" />
             <element signature="e#122#248#0" expanded="false" />
@@ -2857,10 +2857,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.less">
+    <entry file="file://$PROJECT_DIR$/gif.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.1724138" vertical-offset="726" max-vertical-offset="15774">
-          <caret line="38" column="15" selection-start-line="38" selection-start-column="15" selection-end-line="38" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.44095665" vertical-offset="1817" max-vertical-offset="2486">
+          <caret line="96" column="9" selection-start-line="96" selection-start-column="9" selection-end-line="96" selection-end-column="9" />
           <folding />
         </state>
       </provider>

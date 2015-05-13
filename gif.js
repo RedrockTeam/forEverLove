@@ -91,6 +91,10 @@ function GIFin(location){
 	}
 
 	function update(){
+		if(cav.height() > cav.width()*0.45){
+			cav.height(cav.width()*0.45);
+			cav.css("bottom","22.5%");
+		}
 		WIDTH = section.width();
 		HEIGHT = section.height();
 		canvas.width = WIDTH;
