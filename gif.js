@@ -48,6 +48,9 @@ function GIF(location,speed){
 		if(cav.height() > cav.width()*0.45){
 			cav.height(cav.width()*0.45);
 			cav.css("bottom","22.5%");
+		}else{
+			cav.css("height","65%");
+			cav.css("bottom","21.5%");
 		}
 		WIDTH = section.width();
 		HEIGHT = section.height();
@@ -95,6 +98,9 @@ function GIFin(location){
 		if(cav.height() > cav.width()*0.45){
 			cav.height(cav.width()*0.45);
 			cav.css("bottom","22.5%");
+		}else{
+			cav.css("height","65%");
+			cav.css("bottom","21.5%");
 		}
 		WIDTH = section.width();
 		HEIGHT = section.height();
