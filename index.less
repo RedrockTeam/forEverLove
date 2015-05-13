@@ -1,0 +1,715 @@
+@import "animation.css";
+.image(@url,@position){
+  background-image: url(@url);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position:@position;
+}
+.animation(@data){
+  animation:@data;
+  -moz-animation:@data;
+  -webkit-animation:@data;
+  -ms-animation:@data;
+  -o-animation:@data;
+}
+.transition(@data){
+  transition:@data;
+  -webkit-transition:@data;
+  -moz-transition:@data;
+  -ms-transition:@data;
+  -o-transition:@data;
+}
+.radius(@radius) {
+  border-radius: @radius;
+  -o-border-radius: @radius;
+  -ms-border-radius: @radius;
+  -moz-border-radius: @radius;
+  -webkit-border-radius: @radius;
+}
+.origin(@data){
+  transform-origin:20% 40%;
+  -ms-transform-origin:20% 40%;
+  -webkit-transform-origin:20% 40%;
+  -moz-transform-origin:20% 40%;
+  -o-transform-origin:20% 40%;
+}
+body{
+  background-color: #43C4F5;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  min-width: 995px;
+  margin: 0;
+}
+.background{
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  min-width: 995px;
+  position: absolute;
+  top:0;
+  left:0;
+  .mountain1,.mountain2{
+    position: absolute;
+    bottom: 22.83%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: auto 100%;
+  }
+  .mountain1{
+    left: 0;
+    height: 45.83%;
+    width: 30%;
+    .image("img/mountain1.png",left bottom);
+  }
+  .mountain2{
+    right: 0;
+    height: 47.16%;
+    width: 50%;
+    .image("img/mountain2.png",right bottom);
+  }
+  .sky{
+    height: 30%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    .cloud{
+      position: absolute;
+      &.cloud1{
+        height: 22%;
+        width: 7%;
+        top: 20%;
+        left: 3%;
+        .image("img/cloud1.png",left);
+        .animation(cloud1 6s ease-in 0s infinite alternate);
+      }
+      &.cloud2{
+        height: 43%;
+        width: 12%;
+        top: 30%;
+        left: 25%;
+        .image("img/cloud2.png",left);
+        .animation(cloud2 6.3s ease-in 0s infinite alternate);
+      }
+      &.cloud3{
+        height: 26%;
+        width: 9%;
+        top: 67%;
+        left: 60%;
+        .image("img/cloud3.png",left);
+        .animation(cloud3 4.8s ease-in 0s infinite alternate);
+      }
+      &.cloud4{
+        height: 36%;
+        width: 10%;
+        top: 30%;
+        left: 92%;
+        .image("img/cloud4.png",left);
+        .animation(cloud4 6.6s ease-in 0s infinite alternate);
+      }
+    }
+  }
+  .ground{
+    height: 28.83%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-image: url("img/ground.png");
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+    background-position-x: 0;
+    .transition(background-position 6s linear);
+    .skeleton{
+      height: 28%;
+      width: 5%;
+      position: absolute;
+      bottom: 23%;
+      left: 10%;
+      .image("img/skeleton.png",center);
+    }
+    .bar{
+      width: 31.76%;
+      height: 19.65%;
+      position: absolute;
+      top: 54%;
+      left: 34.12%;
+      background-image: url("img/bar.png");
+      background-size: 100% 100%;
+      ul{
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        li{
+          display: block;
+          cursor: pointer;
+          float: left;
+          height: 50%;
+          width: 5%;
+          position: absolute;
+          top:27.5%;
+          .image("img/button.png",center);
+          &.num1{
+            left:5%;
+          }
+          &.num2{
+            left:22%;
+          }
+          &.num3{
+            left:39%;
+          }
+          &.num4{
+            left:56%;
+          }
+          &.num5{
+            left:73%;
+          }
+          &.num6{
+            left:90%;
+          }
+          &.button_on{
+            cursor: auto;
+            .image("img/button_on.png",center);
+          }
+        }
+      }
+    }
+  }
+  .scene{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    &>div{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      bottom: 0%;
+      left: 100%;
+      .transition(transform 4s linear);
+      .transition(-webkit-transform 4s linear);
+    }
+    .sun{
+      height: 16%;
+      width: 10%;
+      position: absolute;
+      top: 6%;
+      right: 8%;
+      .image("img/sun.png",right);
+      display: none;
+    }
+    .tree{
+      width: 30%;
+      height: 69%;
+      position: absolute;
+      bottom: 25%;
+      left: 13.5%;
+      .image("img/scene1_tree.png",right bottom);
+    }
+    .fence{
+      width: 57%;
+      height: 15%;
+      position: absolute;
+      bottom: 25%;
+      left: 0;
+      .image("img/scene1_fence.png",left bottom);
+    }
+    .can{
+      width: 7%;
+      height: 12%;
+      position: absolute;
+      bottom: 24%;
+      left: 17%;
+      .image("img/scene1_can.png",left bottom);
+    }
+    .lamp{
+      width: 11%;
+      height: 54%;
+      position: absolute;
+      bottom: 24.5%;
+      right: 18%;
+      .image("img/scene1_lamp.png",center bottom);
+      .origin(50% 100%);
+    }
+    .bench{
+      width: 22%;
+      height: 19%;
+      position: absolute;
+      bottom: 24%;
+      right: 40%;
+      .image("img/scene1_bench.png",left bottom);
+      .shadow{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0%;
+        top: 0%;
+        opacity: 0;
+        .image("img/scene1_benchshadow.png",left bottom);
+      }
+    }
+    .bosk1{
+      position: absolute;
+      .image("img/bosk1.png",center bottom);
+    }
+    .bosk2{
+      position: absolute;
+      .image("img/bosk2.png",center bottom);
+    }
+    .building{
+      width: 57%;
+      height: 69%;
+      position: absolute;
+      bottom: 23%;
+      right: 8%;
+      .image("img/scene2_building.png",center bottom);
+    }
+    .bosk3{
+      position: absolute;
+      .image("img/bosk3.png",center bottom);
+    }
+    .bosk4{
+      position: absolute;
+      .image("img/bosk4.png",center bottom);
+    }
+    .gate{
+      width: 55%;
+      height: 48%;
+      position: absolute;
+      bottom: 23.5%;
+      left: 5%;
+      .image("img/scene2_gate.png",left bottom);
+    }
+    .station{
+      width: 58%;
+      height: 69%;
+      position: absolute;
+      bottom: 25%;
+      left: 23%;
+      .image("img/scene4_station.png",right bottom);
+    }
+    .hospital{
+      width: 77%;
+      height: 70%;
+      position: absolute;
+      bottom: 23%;
+      right: 10%;
+      .image("img/scene3_hospital.png",center bottom);
+    }
+    .car{
+      width: 55%;
+      height: 54%;
+      position: absolute;
+      bottom: 24%;
+      right: -51%;
+      transform:translateX(-117%);
+      -webkit-transform:translateX(-117%);
+      .image("img/scene4_car.png",right bottom);
+    }
+    .gas1{
+      width: 9%;
+      height: 16%;
+      position: absolute;
+      bottom: 16%;
+      right: -10%;
+      .image("img/scene4_gas1.png",right bottom);
+      opacity: 0;
+    }
+    .gas2{
+      width: 5.5%;
+      height: 10%;
+      position: absolute;
+      bottom: 12%;
+      right: -6%;
+      .image("img/scene4_gas2.png",right bottom);
+      opacity: 0;
+    }
+    .stop{
+      width: 29%;
+      height: 62%;
+      position: absolute;
+      bottom: 24%;
+      right: 60%;
+      .image("img/scene4_stop.png",right bottom);
+    }
+    .cake{
+      width: 30%;
+      height: 57%;
+      position: absolute;
+      bottom: 24%;
+      left: 42%;
+      .image("img/scene5_cake.png",center bottom);
+    }
+    .balloon{
+      width: 12%;
+      height: 47%;
+      position: absolute;
+      &.balloon1{
+        .image("img/scene5_balloon1.png",center);
+        bottom: 51%;
+        left: 78%;
+      }
+      &.balloon2{
+        .image("img/scene5_balloon2.png",center);
+        bottom: 48%;
+        left: 68%;
+      }
+      &.balloon3{
+        .image("img/scene5_balloon3.png",center);
+        bottom: 56%;
+        left: 60%;
+      }
+      &.balloon4{
+        .image("img/scene5_balloon4.png",center);
+        bottom: 55%;
+        left: 53%;
+      }
+      &.balloon5{
+        .image("img/scene5_balloon5.png",center);
+        bottom: 51%;
+        left: 43%;
+      }
+      &.balloon6{
+        .image("img/scene5_balloon6.png",center);
+        bottom: 56%;
+        left: 34%;
+      }
+      &.balloon7{
+        .image("img/scene5_balloon7.png",center);
+        bottom: 54%;
+        left: 22%;
+      }
+      &.balloon8{
+        .image("img/scene5_balloon8.png",center);
+        bottom: 48%;
+        left: 13%;
+      }
+    }
+    .bubble{
+      width: 33%;
+      height: 38%;
+      position: absolute;
+      opacity: 0;
+    }
+    #curtain{
+      width: 67%;
+      height: 73%;
+      position: absolute;
+      bottom: 24%;
+      right: 8%;
+      display: none;
+      &>div{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0;
+        left: 0;
+      }
+      .hobnail1{
+        .image("img/scene6_hobnail1.png",center bottom);
+      }
+      .hobnail2{
+        .image("img/scene6_hobnail2.png",center bottom);
+      }
+      .pole{
+        .image("img/scene6_pole.png",center bottom);
+      }
+      .pole1{
+        .image("img/scene6_pole1.png",center bottom);
+      }
+      .pole2{
+        .image("img/scene6_pole2.png",center bottom);
+      }
+      .curtain{
+        .image("img/scene6_curtain.png",center bottom);
+      }
+      .word{
+        .image("img/scene6_word.png",center bottom);
+      }
+    }
+    .scene1{
+      .bubble{
+        .image("img/scene1_bubble.png",center);
+        bottom: 45%;
+        right: 8%;
+      }
+    }
+    .scene2{
+      .bosk1{
+        width: 46%;
+        height: 35%;
+        bottom: 25%;
+        right: 41%;
+      }
+      .bosk2{
+        width: 52%;
+        height: 48%;
+        bottom: 26%;
+        right: -1%;
+      }
+      .bosk3{
+        width: 41%;
+        height: 36%;
+        bottom: 24.5%;
+        right: 56%;
+      }
+      .bosk4{
+        width: 30%;
+        height: 20%;
+        bottom: 24.5%;
+        right: 5%;
+      }
+      .bubble{
+        .image("img/scene2_bubble.png",center);
+        bottom: 38%;
+        right: 19%;
+      }
+    }
+    .scene3{
+      .bosk1{
+        width: 65%;
+        height: 43%;
+        bottom: 25%;
+        right: 29%;
+      }
+      .bosk2{
+        width: 52%;
+        height: 34%;
+        bottom: 25%;
+        right: 2%;
+      }
+      .bosk3{
+        width: 25%;
+        height: 16%;
+        bottom: 23.5%;
+        right: 63%;
+      }
+      .bosk4{
+        width: 30%;
+        height: 19%;
+        bottom: 24.5%;
+        right: 6%;
+      }
+      .bubble{
+        .image("img/scene3_bubble.png",center);
+        bottom: 42%;
+        right: 32%;
+      }
+    }
+    .scene4{
+      .bubble{
+        .image("img/scene4_bubble.png",center);
+        bottom: 35%;
+        right: 26%;
+      }
+    }
+    .scene5{
+      .bosk1{
+        width: 68%;
+        height: 45%;
+        bottom: 24%;
+        right: 27%;
+      }
+      .bosk2{
+        width: 63%;
+        height: 41%;
+        bottom: 25%;
+        right: 2%;
+      }
+      .bosk3{
+        width: 25%;
+        height: 16%;
+        bottom: 24.5%;
+        right: 75%;
+      }
+      .bosk4{
+        width: 30%;
+        height: 19%;
+        bottom: 25.5%;
+        right: 23%;
+      }
+      .bubble{
+        .image("img/scene5_bubble.png",center);
+        bottom: 40%;
+        right: 27%;
+      }
+    }
+    .canvas{
+      width: 100%;
+      height: 65%;
+      position: absolute;
+      bottom: 21.5%;
+      left: -20%;
+    }
+  }
+  .enter{
+    -webkit-transform:translateX(-100%);
+    transform:translateX(-100%);
+    .bubble{
+      opacity: 1;
+      .animation(bubble 6s ease-in 0s);
+    }
+    &.scene1 .bubble{
+      opacity: 0;
+      .animation(none);
+    }
+    &.scene4 .bubble {
+      opacity: 1;
+      .animation(bubble4 10s ease-in 0s);
+    }
+    &.scene5 .bubble {
+      opacity: 1;
+      .animation(bubble5 8s ease-in 0s);
+    }
+    .car{
+      .animation(carline 6s linear 0s);
+    }
+    .balloon1{
+      .animation(balloon1 6s ease-in 0s);
+    }
+    .balloon2{
+      .animation(balloon2 6s ease-in 0s);
+    }
+    .balloon3{
+      .animation(balloon3 6s ease-in 0s);
+    }
+    .balloon4{
+      .animation(balloon4 6s ease-in 0s);
+    }
+    .balloon5{
+      .animation(balloon5 6s ease-in 0s);
+    }
+    .balloon6{
+      .animation(balloon6 6s ease-in 0s);
+    }
+    .balloon7{
+      .animation(balloon7 6s ease-in 0s);
+    }
+    .balloon8{
+      .animation(balloon8 6s ease-in 0s);
+    }
+    .gas1{
+      opacity: 1;
+      transform:translateX(20%);
+      -webkit-transform:translateX(20%);
+      .animation(gas1 12s ease-in 0s);
+    }
+    .gas2{
+      opacity: 1;
+      transform:translateX(20%) translateY(10%);
+      -webkit-transform:translateX(20%) translateY(10%);
+      .animation(gas2 12s ease-in 0s);
+    }
+  }
+  .exit{
+    transform:translateX(-200%);
+    -webkit-transform:translateX(-200%);
+    .bubble{
+      opacity: 1;
+    }
+    .gas1,.gas2{
+      opacity: 1;
+    }
+  }
+  .enter_animation {
+    &.scene1 .bubble {
+      opacity: 1;
+      .animation(bubble1 3s ease-in 0s);
+    }
+    .sun {
+      display: block;
+      .animation(sunline 1s linear 0s);
+    }
+    .shadow{
+      opacity: 1 !important;
+      .animation(shadow 6s linear 0s);
+    }
+    .balloon1 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut1 2.5s ease-in 0s);
+    }
+    .balloon2 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut2 2.5s ease-in 0s);
+    }
+    .balloon3 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut3 2.5s ease-in 0s);
+    }
+    .balloon4 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut4 2.5s ease-in 0s);
+    }
+    .balloon5 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut5 2.5s ease-in 0s);
+    }
+    .balloon6 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut6 2.5s ease-in 0s);
+    }
+    .balloon7 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut7 2.5s ease-in 0s);
+    }
+    .balloon8 {
+      transform: translateY(-120%);
+      -webkit-transform: translateY(-120%);
+      .animation(balloonOut8 2.5s ease-in 0s);
+    }
+    &.scene5 .bubble{
+      opacity: 0;
+      .animation(bubbleOut 3s ease-in 0s);
+    }
+    .cake{
+      opacity: 0;
+      .animation(cakeOut 4s ease-in 0s);
+    }
+    &#curtain{
+      display: block;
+      &>div{
+        -webkit-transform-origin:50% 100%;
+        transform-origin:50% 100%;
+      }
+      .hobnail1{
+        .animation(hobnail1 2s ease-out 0s);
+      }
+      .hobnail2{
+        .animation(hobnail2 2s ease-out 0s);
+      }
+      .pole1{
+        .animation(pole1 2s ease-out 0s);
+      }
+      .pole2{
+        .animation(pole2 2s ease-out 0s);
+      }
+      .pole{
+        .animation(pole 3s ease-out 0s);
+      }
+      .curtain{
+        .animation(pole 4.2s ease-out 0s);
+      }
+      .word{
+        .animation(pole 6s ease-out 0s);
+      }
+    }
+  }
+  .exit_animation{
+
+  }
+}
+
+

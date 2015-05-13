@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>致最爱的你</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script type="text/javascript" src="jquery.min.js"></script>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" />
+</head>
+<body>
+    <div class="background">
+        <div class="mountain1"></div>
+        <div class="mountain2"></div>
+        <div class="scene">
+            <div class="scene1 enter">
+                <div class="sun"></div>
+            </div>
+        </div>
+        <div class="sky">
+            <div class="cloud cloud1"></div>
+            <div class="cloud cloud2"></div>
+            <div class="cloud cloud3"></div>
+            <div class="cloud cloud4"></div>
+        </div>
+        <div class="scene">
+            <div class="scene1 enter">
+                <div class="tree"></div>
+            </div>
+            <div class="scene2">
+                <div class="bosk1"></div>
+                <div class="bosk2"></div>
+                <div class="building"></div>
+                <div class="bosk3"></div>
+                <div class="bosk4"></div>
+                <div class="skeleton"></div>
+            </div>
+            <div class="scene3">
+                <div class="bosk1"></div>
+                <div class="bosk2"></div>
+                <div class="hospital"></div>
+                <div class="bosk3"></div>
+                <div class="bosk4"></div>
+            </div>
+            <div class="scene4">
+                <div class="station"></div>
+            </div>
+            <div class="scene5">
+                <div class="bosk1"></div>
+                <div class="bosk2"></div>
+                <div class="bosk3"></div>
+                <div class="bosk4"></div>
+                <div class="balloon balloon1"></div>
+                <div class="balloon balloon5"></div>
+                <div class="balloon balloon6"></div>
+                <div class="balloon balloon8"></div>
+                <div class="balloon balloon7"></div>
+                <div class="balloon balloon4"></div>
+                <div class="balloon balloon2"></div>
+                <div class="balloon balloon3"></div>
+            </div>
+        </div>
+        <div class="ground">
+            <div class="bar">
+                <ul id="bar">
+                    <li num="1" class="num1"></li>
+                    <li num="2" class="num2"></li>
+                    <li num="3" class="num3"></li>
+                    <li num="4" class="num4"></li>
+                    <li num="5" class="num5"></li>
+                    <li num="6" class="num6"></li>
+                </ul>
+            </div>
+            <div class="skeleton"></div>
+        </div>
+        <div class="scene">
+            <div class="scene1 enter">
+                <div class="fence"></div>
+                <div class="lamp"></div>
+                <div class="bench">
+                    <!--<div class="shadow"></div>-->
+                </div>
+                <div class="can"></div>
+                <div class="bubble"></div>
+            </div>
+            <div class="scene2">
+                <div class="gate"></div>
+                <div class="bubble"></div>
+            </div>
+            <div class="scene3">
+                <div class="bubble"></div>
+            </div>
+            <div class="scene4">
+                <div class="car">
+                    <div class="gas1"></div>
+                    <div class="gas2"></div>
+                </div>
+                <div class="stop"></div>
+                <div class="bubble"></div>
+            </div>
+            <div class="scene5">
+                <div class="cake"></div>
+                <div class="bubble"></div>
+                <div id="curtain" class="">
+                    <div class="hobnail1"></div>
+                    <div class="hobnail2"></div>
+                    <div class="pole1"></div>
+                    <div class="pole2"></div>
+                    <div class="pole"></div>
+                    <div class="curtain"></div>
+                    <div class="word"></div>
+                </div>
+            </div>
+            <div class="canvas">
+                <canvas id="canvas" ></canvas>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<script src = "gif.js"></script>
+<script type="text/javascript">
+
+    //此处引用：鼠标滚轮mousewheel插件
+    !function(a){"function"==typeof define&&define.amd?define(["jquery"],a):"object"==typeof exports?module.exports=a:a(jQuery)}(function(a){function b(b){var g=b||window.event,h=i.call(arguments,1),j=0,l=0,m=0,n=0,o=0,p=0;if(b=a.event.fix(g),b.type="mousewheel","detail"in g&&(m=-1*g.detail),"wheelDelta"in g&&(m=g.wheelDelta),"wheelDeltaY"in g&&(m=g.wheelDeltaY),"wheelDeltaX"in g&&(l=-1*g.wheelDeltaX),"axis"in g&&g.axis===g.HORIZONTAL_AXIS&&(l=-1*m,m=0),j=0===m?l:m,"deltaY"in g&&(m=-1*g.deltaY,j=m),"deltaX"in g&&(l=g.deltaX,0===m&&(j=-1*l)),0!==m||0!==l){if(1===g.deltaMode){var q=a.data(this,"mousewheel-line-height");j*=q,m*=q,l*=q}else if(2===g.deltaMode){var r=a.data(this,"mousewheel-page-height");j*=r,m*=r,l*=r}if(n=Math.max(Math.abs(m),Math.abs(l)),(!f||f>n)&&(f=n,d(g,n)&&(f/=40)),d(g,n)&&(j/=40,l/=40,m/=40),j=Math[j>=1?"floor":"ceil"](j/f),l=Math[l>=1?"floor":"ceil"](l/f),m=Math[m>=1?"floor":"ceil"](m/f),k.settings.normalizeOffset&&this.getBoundingClientRect){var s=this.getBoundingClientRect();o=b.clientX-s.left,p=b.clientY-s.top}return b.deltaX=l,b.deltaY=m,b.deltaFactor=f,b.offsetX=o,b.offsetY=p,b.deltaMode=0,h.unshift(b,j,l,m),e&&clearTimeout(e),e=setTimeout(c,200),(a.event.dispatch||a.event.handle).apply(this,h)}}function c(){f=null}function d(a,b){return k.settings.adjustOldDeltas&&"mousewheel"===a.type&&b%120===0}var e,f,g=["wheel","mousewheel","DOMMouseScroll","MozMousePixelScroll"],h="onwheel"in document||document.documentMode>=9?["wheel"]:["mousewheel","DomMouseScroll","MozMousePixelScroll"],i=Array.prototype.slice;if(a.event.fixHooks)for(var j=g.length;j;)a.event.fixHooks[g[--j]]=a.event.mouseHooks;var k=a.event.special.mousewheel={version:"3.1.12",setup:function(){if(this.addEventListener)for(var c=h.length;c;)this.addEventListener(h[--c],b,!1);else this.onmousewheel=b;a.data(this,"mousewheel-line-height",k.getLineHeight(this)),a.data(this,"mousewheel-page-height",k.getPageHeight(this))},teardown:function(){if(this.removeEventListener)for(var c=h.length;c;)this.removeEventListener(h[--c],b,!1);else this.onmousewheel=null;a.removeData(this,"mousewheel-line-height"),a.removeData(this,"mousewheel-page-height")},getLineHeight:function(b){var c=a(b),d=c["offsetParent"in a.fn?"offsetParent":"parent"]();return d.length||(d=a("body")),parseInt(d.css("fontSize"),10)||parseInt(c.css("fontSize"),10)||16},getPageHeight:function(b){return a(b).height()},settings:{adjustOldDeltas:!0,normalizeOffset:!0}};a.fn.extend({mousewheel:function(a){return a?this.bind("mousewheel",a):this.trigger("mousewheel")},unmousewheel:function(a){return this.unbind("mousewheel",a)}})});
+
+    $(function(){
+        var num = -1;
+        var $scene = $(".scene");
+        var $ground = $(".ground");
+        var $li = $("#bar li");
+        var runNum = true;
+
+        /*响应鼠标左键点击*/
+        $("#bar li").on("click",function(){
+            if(num == +$(this).attr("num")-2){
+                run();
+            }
+        });
+
+        /*页面滑动*/
+        function run(){
+            if(runNum && num<5){
+                runNum = false;
+                if(num < 0){
+                    GIF(0.25,2);
+                    $scene.children(".enter").addClass("enter_animation");
+                    num++;
+                    $li.eq(num).addClass("button_on");
+                    setTimeout(function(){
+                        runNum = true;
+                    },2000);
+                }else{
+                    if(num == 4){
+                        $scene.children(".enter").addClass("enter_animation");
+                        num++;
+                        $li.eq(num).addClass("button_on");
+                        setTimeout(function(){
+                            $("#curtain").addClass("enter_animation");
+                        },4000);
+                    }else{
+                        GIFin(0.25);
+                        $ground.css("background-position",parseInt($ground.css("background-position"))-$ground.width()*1.5+"px 0px");
+                        $scene.children(".enter").removeClass("enter").addClass("exit");
+                        setTimeout(function(){
+                            num++;
+                            $li.eq(num).addClass("button_on");
+                            $scene.children(".scene"+(num+1)).addClass("enter");
+                            setTimeout(function(){
+                                runNum = true;
+                            },10000);
+                        },2000);
+                    }
+                }
+            }
+        };
+
+        /*响应鼠标*/
+        $(document).one('mousewheel',mouse_);
+        function mouse_(event){
+            if(event.deltaY<0){
+                run();
+            }
+            setTimeout(function(){$(document).one('mousewheel',mouse_)},1000)
+        };
+
+        /*响应键盘上下键*/
+        $(document).one('keydown',k);
+        function k(event){
+            var e=event||window.event;
+            var key=e.keyCode||e.which||e.charCode;
+            switch(key)	{
+                case 40: run();
+                    break;
+                case 39: run();
+                    break;
+            };
+            setTimeout(function(){$(document).one('keydown',k)},1000);
+        }
+
+        //定义初始坐标
+        var shiftCoord = { x: 0, y: 0 };
+        var finalCoord = { x: 0, y: 0 };
+
+        $(document).on("touchstart",function() {
+
+            //定义滑动初始时的坐标
+            shiftCoord.x = event.targetTouches[0].pageX;
+            shiftCoord.y = event.targetTouches[0].pageY;
+        });
+
+        $(document).on("touchmove",function(){
+
+            //定义滑动中的坐标
+            finalCoord.x = event.targetTouches[0].pageX;
+            finalCoord.y = event.targetTouches[0].pageY;
+
+        });
+
+        $(document).on("touchend",function() {
+
+            if(finalCoord.x - shiftCoord.x < -5){
+                run();
+            }
+
+        });
+
+    });
+</script>
+</html>

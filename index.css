@@ -1,0 +1,985 @@
+@import "animation.css";
+body {
+  background-color: #43C4F5;
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  min-width: 995px;
+  margin: 0;
+}
+.background {
+  width: 100%;
+  height: 100%;
+  min-height: 600px;
+  min-width: 995px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.background .mountain1,
+.background .mountain2 {
+  position: absolute;
+  bottom: 22.83%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+}
+.background .mountain1 {
+  left: 0;
+  height: 45.83%;
+  width: 30%;
+  background-image: url("img/mountain1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+}
+.background .mountain2 {
+  right: 0;
+  height: 47.16%;
+  width: 50%;
+  background-image: url("img/mountain2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.background .sky {
+  height: 30%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.background .sky .cloud {
+  position: absolute;
+}
+.background .sky .cloud.cloud1 {
+  height: 22%;
+  width: 7%;
+  top: 20%;
+  left: 3%;
+  background-image: url("img/cloud1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  animation: cloud1 6s ease-in 0s infinite alternate;
+  -moz-animation: cloud1 6s ease-in 0s infinite alternate;
+  -webkit-animation: cloud1 6s ease-in 0s infinite alternate;
+  -ms-animation: cloud1 6s ease-in 0s infinite alternate;
+  -o-animation: cloud1 6s ease-in 0s infinite alternate;
+}
+.background .sky .cloud.cloud2 {
+  height: 43%;
+  width: 12%;
+  top: 30%;
+  left: 25%;
+  background-image: url("img/cloud2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  animation: cloud2 6.3s ease-in 0s infinite alternate;
+  -moz-animation: cloud2 6.3s ease-in 0s infinite alternate;
+  -webkit-animation: cloud2 6.3s ease-in 0s infinite alternate;
+  -ms-animation: cloud2 6.3s ease-in 0s infinite alternate;
+  -o-animation: cloud2 6.3s ease-in 0s infinite alternate;
+}
+.background .sky .cloud.cloud3 {
+  height: 26%;
+  width: 9%;
+  top: 67%;
+  left: 60%;
+  background-image: url("img/cloud3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  animation: cloud3 4.8s ease-in 0s infinite alternate;
+  -moz-animation: cloud3 4.8s ease-in 0s infinite alternate;
+  -webkit-animation: cloud3 4.8s ease-in 0s infinite alternate;
+  -ms-animation: cloud3 4.8s ease-in 0s infinite alternate;
+  -o-animation: cloud3 4.8s ease-in 0s infinite alternate;
+}
+.background .sky .cloud.cloud4 {
+  height: 36%;
+  width: 10%;
+  top: 30%;
+  left: 92%;
+  background-image: url("img/cloud4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+  animation: cloud4 6.6s ease-in 0s infinite alternate;
+  -moz-animation: cloud4 6.6s ease-in 0s infinite alternate;
+  -webkit-animation: cloud4 6.6s ease-in 0s infinite alternate;
+  -ms-animation: cloud4 6.6s ease-in 0s infinite alternate;
+  -o-animation: cloud4 6.6s ease-in 0s infinite alternate;
+}
+.background .ground {
+  height: 28.83%;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-image: url("img/ground.png");
+  background-repeat: repeat-x;
+  background-size: auto 100%;
+  background-position-x: 0;
+  transition: background-position 6s linear;
+  -webkit-transition: background-position 6s linear;
+  -moz-transition: background-position 6s linear;
+  -ms-transition: background-position 6s linear;
+  -o-transition: background-position 6s linear;
+}
+.background .ground .skeleton {
+  height: 28%;
+  width: 5%;
+  position: absolute;
+  bottom: 23%;
+  left: 10%;
+  background-image: url("img/skeleton.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.background .ground .bar {
+  width: 31.76%;
+  height: 19.65%;
+  position: absolute;
+  top: 54%;
+  left: 34.12%;
+  background-image: url("img/bar.png");
+  background-size: 100% 100%;
+}
+.background .ground .bar ul {
+  display: block;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+.background .ground .bar ul li {
+  display: block;
+  cursor: pointer;
+  float: left;
+  height: 50%;
+  width: 5%;
+  position: absolute;
+  top: 27.5%;
+  background-image: url("img/button.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.background .ground .bar ul li.num1 {
+  left: 5%;
+}
+.background .ground .bar ul li.num2 {
+  left: 22%;
+}
+.background .ground .bar ul li.num3 {
+  left: 39%;
+}
+.background .ground .bar ul li.num4 {
+  left: 56%;
+}
+.background .ground .bar ul li.num5 {
+  left: 73%;
+}
+.background .ground .bar ul li.num6 {
+  left: 90%;
+}
+.background .ground .bar ul li.button_on {
+  cursor: auto;
+  background-image: url("img/button_on.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.background .scene {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+}
+.background .scene > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0%;
+  left: 100%;
+  transition: transform 4s linear;
+  -webkit-transition: transform 4s linear;
+  -moz-transition: transform 4s linear;
+  -ms-transition: transform 4s linear;
+  -o-transition: transform 4s linear;
+  transition: -webkit-transform 4s linear;
+  -webkit-transition: -webkit-transform 4s linear;
+  -moz-transition: -webkit-transform 4s linear;
+  -ms-transition: -webkit-transform 4s linear;
+  -o-transition: -webkit-transform 4s linear;
+}
+.background .scene .sun {
+  height: 16%;
+  width: 10%;
+  position: absolute;
+  top: 6%;
+  right: 8%;
+  background-image: url("img/sun.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right;
+  display: none;
+}
+.background .scene .tree {
+  width: 30%;
+  height: 69%;
+  position: absolute;
+  bottom: 25%;
+  left: 13.5%;
+  background-image: url("img/scene1_tree.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.background .scene .fence {
+  width: 57%;
+  height: 15%;
+  position: absolute;
+  bottom: 25%;
+  left: 0;
+  background-image: url("img/scene1_fence.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+}
+.background .scene .can {
+  width: 7%;
+  height: 12%;
+  position: absolute;
+  bottom: 24%;
+  left: 17%;
+  background-image: url("img/scene1_can.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+}
+.background .scene .lamp {
+  width: 11%;
+  height: 54%;
+  position: absolute;
+  bottom: 24.5%;
+  right: 18%;
+  background-image: url("img/scene1_lamp.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  transform-origin: 20% 40%;
+  -ms-transform-origin: 20% 40%;
+  -webkit-transform-origin: 20% 40%;
+  -moz-transform-origin: 20% 40%;
+  -o-transform-origin: 20% 40%;
+}
+.background .scene .bench {
+  width: 22%;
+  height: 19%;
+  position: absolute;
+  bottom: 24%;
+  right: 40%;
+  background-image: url("img/scene1_bench.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+}
+.background .scene .bench .shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  opacity: 0;
+  background-image: url("img/scene1_benchshadow.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+}
+.background .scene .bosk1 {
+  position: absolute;
+  background-image: url("img/bosk1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .bosk2 {
+  position: absolute;
+  background-image: url("img/bosk2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .building {
+  width: 57%;
+  height: 69%;
+  position: absolute;
+  bottom: 23%;
+  right: 8%;
+  background-image: url("img/scene2_building.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .bosk3 {
+  position: absolute;
+  background-image: url("img/bosk3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .bosk4 {
+  position: absolute;
+  background-image: url("img/bosk4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .gate {
+  width: 55%;
+  height: 48%;
+  position: absolute;
+  bottom: 23.5%;
+  left: 5%;
+  background-image: url("img/scene2_gate.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left bottom;
+}
+.background .scene .station {
+  width: 58%;
+  height: 69%;
+  position: absolute;
+  bottom: 25%;
+  left: 23%;
+  background-image: url("img/scene4_station.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.background .scene .hospital {
+  width: 77%;
+  height: 70%;
+  position: absolute;
+  bottom: 23%;
+  right: 10%;
+  background-image: url("img/scene3_hospital.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .car {
+  width: 55%;
+  height: 54%;
+  position: absolute;
+  bottom: 24%;
+  right: -51%;
+  transform: translateX(-117%);
+  -webkit-transform: translateX(-117%);
+  background-image: url("img/scene4_car.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.background .scene .gas1 {
+  width: 9%;
+  height: 16%;
+  position: absolute;
+  bottom: 16%;
+  right: -10%;
+  background-image: url("img/scene4_gas1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  opacity: 0;
+}
+.background .scene .gas2 {
+  width: 5.5%;
+  height: 10%;
+  position: absolute;
+  bottom: 12%;
+  right: -6%;
+  background-image: url("img/scene4_gas2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+  opacity: 0;
+}
+.background .scene .stop {
+  width: 29%;
+  height: 62%;
+  position: absolute;
+  bottom: 24%;
+  right: 60%;
+  background-image: url("img/scene4_stop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right bottom;
+}
+.background .scene .cake {
+  width: 30%;
+  height: 57%;
+  position: absolute;
+  bottom: 24%;
+  left: 42%;
+  background-image: url("img/scene5_cake.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .balloon {
+  width: 12%;
+  height: 47%;
+  position: absolute;
+}
+.background .scene .balloon.balloon1 {
+  background-image: url("img/scene5_balloon1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 51%;
+  left: 78%;
+}
+.background .scene .balloon.balloon2 {
+  background-image: url("img/scene5_balloon2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 48%;
+  left: 68%;
+}
+.background .scene .balloon.balloon3 {
+  background-image: url("img/scene5_balloon3.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 56%;
+  left: 60%;
+}
+.background .scene .balloon.balloon4 {
+  background-image: url("img/scene5_balloon4.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 55%;
+  left: 53%;
+}
+.background .scene .balloon.balloon5 {
+  background-image: url("img/scene5_balloon5.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 51%;
+  left: 43%;
+}
+.background .scene .balloon.balloon6 {
+  background-image: url("img/scene5_balloon6.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 56%;
+  left: 34%;
+}
+.background .scene .balloon.balloon7 {
+  background-image: url("img/scene5_balloon7.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 54%;
+  left: 22%;
+}
+.background .scene .balloon.balloon8 {
+  background-image: url("img/scene5_balloon8.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 48%;
+  left: 13%;
+}
+.background .scene .bubble {
+  width: 33%;
+  height: 38%;
+  position: absolute;
+  opacity: 0;
+}
+.background .scene #curtain {
+  width: 67%;
+  height: 73%;
+  position: absolute;
+  bottom: 24%;
+  right: 8%;
+  display: none;
+}
+.background .scene #curtain > div {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.background .scene #curtain .hobnail1 {
+  background-image: url("img/scene6_hobnail1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene #curtain .hobnail2 {
+  background-image: url("img/scene6_hobnail2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene #curtain .pole {
+  background-image: url("img/scene6_pole.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene #curtain .pole1 {
+  background-image: url("img/scene6_pole1.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene #curtain .pole2 {
+  background-image: url("img/scene6_pole2.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene #curtain .curtain {
+  background-image: url("img/scene6_curtain.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene #curtain .word {
+  background-image: url("img/scene6_word.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+}
+.background .scene .scene1 .bubble {
+  background-image: url("img/scene1_bubble.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 45%;
+  right: 8%;
+}
+.background .scene .scene2 .bosk1 {
+  width: 46%;
+  height: 35%;
+  bottom: 25%;
+  right: 41%;
+}
+.background .scene .scene2 .bosk2 {
+  width: 52%;
+  height: 48%;
+  bottom: 26%;
+  right: -1%;
+}
+.background .scene .scene2 .bosk3 {
+  width: 41%;
+  height: 36%;
+  bottom: 24.5%;
+  right: 56%;
+}
+.background .scene .scene2 .bosk4 {
+  width: 30%;
+  height: 20%;
+  bottom: 24.5%;
+  right: 5%;
+}
+.background .scene .scene2 .bubble {
+  background-image: url("img/scene2_bubble.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 38%;
+  right: 19%;
+}
+.background .scene .scene3 .bosk1 {
+  width: 65%;
+  height: 43%;
+  bottom: 25%;
+  right: 29%;
+}
+.background .scene .scene3 .bosk2 {
+  width: 52%;
+  height: 34%;
+  bottom: 25%;
+  right: 2%;
+}
+.background .scene .scene3 .bosk3 {
+  width: 25%;
+  height: 16%;
+  bottom: 23.5%;
+  right: 63%;
+}
+.background .scene .scene3 .bosk4 {
+  width: 30%;
+  height: 19%;
+  bottom: 24.5%;
+  right: 6%;
+}
+.background .scene .scene3 .bubble {
+  background-image: url("img/scene3_bubble.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 42%;
+  right: 32%;
+}
+.background .scene .scene4 .bubble {
+  background-image: url("img/scene4_bubble.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 35%;
+  right: 26%;
+}
+.background .scene .scene5 .bosk1 {
+  width: 68%;
+  height: 45%;
+  bottom: 24%;
+  right: 27%;
+}
+.background .scene .scene5 .bosk2 {
+  width: 63%;
+  height: 41%;
+  bottom: 25%;
+  right: 2%;
+}
+.background .scene .scene5 .bosk3 {
+  width: 25%;
+  height: 16%;
+  bottom: 24.5%;
+  right: 75%;
+}
+.background .scene .scene5 .bosk4 {
+  width: 30%;
+  height: 19%;
+  bottom: 25.5%;
+  right: 23%;
+}
+.background .scene .scene5 .bubble {
+  background-image: url("img/scene5_bubble.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  bottom: 40%;
+  right: 27%;
+}
+.background .scene .canvas {
+  width: 100%;
+  height: 65%;
+  position: absolute;
+  bottom: 21.5%;
+  left: -20%;
+}
+.background .enter {
+  -webkit-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+.background .enter .bubble {
+  opacity: 1;
+  animation: bubble 6s ease-in 0s;
+  -moz-animation: bubble 6s ease-in 0s;
+  -webkit-animation: bubble 6s ease-in 0s;
+  -ms-animation: bubble 6s ease-in 0s;
+  -o-animation: bubble 6s ease-in 0s;
+}
+.background .enter.scene1 .bubble {
+  opacity: 0;
+  animation: none;
+  -moz-animation: none;
+  -webkit-animation: none;
+  -ms-animation: none;
+  -o-animation: none;
+}
+.background .enter.scene4 .bubble {
+  opacity: 1;
+  animation: bubble4 10s ease-in 0s;
+  -moz-animation: bubble4 10s ease-in 0s;
+  -webkit-animation: bubble4 10s ease-in 0s;
+  -ms-animation: bubble4 10s ease-in 0s;
+  -o-animation: bubble4 10s ease-in 0s;
+}
+.background .enter.scene5 .bubble {
+  opacity: 1;
+  animation: bubble5 8s ease-in 0s;
+  -moz-animation: bubble5 8s ease-in 0s;
+  -webkit-animation: bubble5 8s ease-in 0s;
+  -ms-animation: bubble5 8s ease-in 0s;
+  -o-animation: bubble5 8s ease-in 0s;
+}
+.background .enter .car {
+  animation: carline 6s linear 0s;
+  -moz-animation: carline 6s linear 0s;
+  -webkit-animation: carline 6s linear 0s;
+  -ms-animation: carline 6s linear 0s;
+  -o-animation: carline 6s linear 0s;
+}
+.background .enter .balloon1 {
+  animation: balloon1 6s ease-in 0s;
+  -moz-animation: balloon1 6s ease-in 0s;
+  -webkit-animation: balloon1 6s ease-in 0s;
+  -ms-animation: balloon1 6s ease-in 0s;
+  -o-animation: balloon1 6s ease-in 0s;
+}
+.background .enter .balloon2 {
+  animation: balloon2 6s ease-in 0s;
+  -moz-animation: balloon2 6s ease-in 0s;
+  -webkit-animation: balloon2 6s ease-in 0s;
+  -ms-animation: balloon2 6s ease-in 0s;
+  -o-animation: balloon2 6s ease-in 0s;
+}
+.background .enter .balloon3 {
+  animation: balloon3 6s ease-in 0s;
+  -moz-animation: balloon3 6s ease-in 0s;
+  -webkit-animation: balloon3 6s ease-in 0s;
+  -ms-animation: balloon3 6s ease-in 0s;
+  -o-animation: balloon3 6s ease-in 0s;
+}
+.background .enter .balloon4 {
+  animation: balloon4 6s ease-in 0s;
+  -moz-animation: balloon4 6s ease-in 0s;
+  -webkit-animation: balloon4 6s ease-in 0s;
+  -ms-animation: balloon4 6s ease-in 0s;
+  -o-animation: balloon4 6s ease-in 0s;
+}
+.background .enter .balloon5 {
+  animation: balloon5 6s ease-in 0s;
+  -moz-animation: balloon5 6s ease-in 0s;
+  -webkit-animation: balloon5 6s ease-in 0s;
+  -ms-animation: balloon5 6s ease-in 0s;
+  -o-animation: balloon5 6s ease-in 0s;
+}
+.background .enter .balloon6 {
+  animation: balloon6 6s ease-in 0s;
+  -moz-animation: balloon6 6s ease-in 0s;
+  -webkit-animation: balloon6 6s ease-in 0s;
+  -ms-animation: balloon6 6s ease-in 0s;
+  -o-animation: balloon6 6s ease-in 0s;
+}
+.background .enter .balloon7 {
+  animation: balloon7 6s ease-in 0s;
+  -moz-animation: balloon7 6s ease-in 0s;
+  -webkit-animation: balloon7 6s ease-in 0s;
+  -ms-animation: balloon7 6s ease-in 0s;
+  -o-animation: balloon7 6s ease-in 0s;
+}
+.background .enter .balloon8 {
+  animation: balloon8 6s ease-in 0s;
+  -moz-animation: balloon8 6s ease-in 0s;
+  -webkit-animation: balloon8 6s ease-in 0s;
+  -ms-animation: balloon8 6s ease-in 0s;
+  -o-animation: balloon8 6s ease-in 0s;
+}
+.background .enter .gas1 {
+  opacity: 1;
+  transform: translateX(20%);
+  -webkit-transform: translateX(20%);
+  animation: gas1 12s ease-in 0s;
+  -moz-animation: gas1 12s ease-in 0s;
+  -webkit-animation: gas1 12s ease-in 0s;
+  -ms-animation: gas1 12s ease-in 0s;
+  -o-animation: gas1 12s ease-in 0s;
+}
+.background .enter .gas2 {
+  opacity: 1;
+  transform: translateX(20%) translateY(10%);
+  -webkit-transform: translateX(20%) translateY(10%);
+  animation: gas2 12s ease-in 0s;
+  -moz-animation: gas2 12s ease-in 0s;
+  -webkit-animation: gas2 12s ease-in 0s;
+  -ms-animation: gas2 12s ease-in 0s;
+  -o-animation: gas2 12s ease-in 0s;
+}
+.background .exit {
+  transform: translateX(-200%);
+  -webkit-transform: translateX(-200%);
+}
+.background .exit .bubble {
+  opacity: 1;
+}
+.background .exit .gas1,
+.background .exit .gas2 {
+  opacity: 1;
+}
+.background .enter_animation.scene1 .bubble {
+  opacity: 1;
+  animation: bubble1 3s ease-in 0s;
+  -moz-animation: bubble1 3s ease-in 0s;
+  -webkit-animation: bubble1 3s ease-in 0s;
+  -ms-animation: bubble1 3s ease-in 0s;
+  -o-animation: bubble1 3s ease-in 0s;
+}
+.background .enter_animation .sun {
+  display: block;
+  animation: sunline 1s linear 0s;
+  -moz-animation: sunline 1s linear 0s;
+  -webkit-animation: sunline 1s linear 0s;
+  -ms-animation: sunline 1s linear 0s;
+  -o-animation: sunline 1s linear 0s;
+}
+.background .enter_animation .shadow {
+  opacity: 1 !important;
+  animation: shadow 6s linear 0s;
+  -moz-animation: shadow 6s linear 0s;
+  -webkit-animation: shadow 6s linear 0s;
+  -ms-animation: shadow 6s linear 0s;
+  -o-animation: shadow 6s linear 0s;
+}
+.background .enter_animation .balloon1 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut1 2.5s ease-in 0s;
+  -moz-animation: balloonOut1 2.5s ease-in 0s;
+  -webkit-animation: balloonOut1 2.5s ease-in 0s;
+  -ms-animation: balloonOut1 2.5s ease-in 0s;
+  -o-animation: balloonOut1 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon2 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut2 2.5s ease-in 0s;
+  -moz-animation: balloonOut2 2.5s ease-in 0s;
+  -webkit-animation: balloonOut2 2.5s ease-in 0s;
+  -ms-animation: balloonOut2 2.5s ease-in 0s;
+  -o-animation: balloonOut2 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon3 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut3 2.5s ease-in 0s;
+  -moz-animation: balloonOut3 2.5s ease-in 0s;
+  -webkit-animation: balloonOut3 2.5s ease-in 0s;
+  -ms-animation: balloonOut3 2.5s ease-in 0s;
+  -o-animation: balloonOut3 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon4 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut4 2.5s ease-in 0s;
+  -moz-animation: balloonOut4 2.5s ease-in 0s;
+  -webkit-animation: balloonOut4 2.5s ease-in 0s;
+  -ms-animation: balloonOut4 2.5s ease-in 0s;
+  -o-animation: balloonOut4 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon5 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut5 2.5s ease-in 0s;
+  -moz-animation: balloonOut5 2.5s ease-in 0s;
+  -webkit-animation: balloonOut5 2.5s ease-in 0s;
+  -ms-animation: balloonOut5 2.5s ease-in 0s;
+  -o-animation: balloonOut5 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon6 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut6 2.5s ease-in 0s;
+  -moz-animation: balloonOut6 2.5s ease-in 0s;
+  -webkit-animation: balloonOut6 2.5s ease-in 0s;
+  -ms-animation: balloonOut6 2.5s ease-in 0s;
+  -o-animation: balloonOut6 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon7 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut7 2.5s ease-in 0s;
+  -moz-animation: balloonOut7 2.5s ease-in 0s;
+  -webkit-animation: balloonOut7 2.5s ease-in 0s;
+  -ms-animation: balloonOut7 2.5s ease-in 0s;
+  -o-animation: balloonOut7 2.5s ease-in 0s;
+}
+.background .enter_animation .balloon8 {
+  transform: translateY(-120%);
+  -webkit-transform: translateY(-120%);
+  animation: balloonOut8 2.5s ease-in 0s;
+  -moz-animation: balloonOut8 2.5s ease-in 0s;
+  -webkit-animation: balloonOut8 2.5s ease-in 0s;
+  -ms-animation: balloonOut8 2.5s ease-in 0s;
+  -o-animation: balloonOut8 2.5s ease-in 0s;
+}
+.background .enter_animation.scene5 .bubble {
+  opacity: 0;
+  animation: bubbleOut 3s ease-in 0s;
+  -moz-animation: bubbleOut 3s ease-in 0s;
+  -webkit-animation: bubbleOut 3s ease-in 0s;
+  -ms-animation: bubbleOut 3s ease-in 0s;
+  -o-animation: bubbleOut 3s ease-in 0s;
+}
+.background .enter_animation .cake {
+  opacity: 0;
+  animation: cakeOut 4s ease-in 0s;
+  -moz-animation: cakeOut 4s ease-in 0s;
+  -webkit-animation: cakeOut 4s ease-in 0s;
+  -ms-animation: cakeOut 4s ease-in 0s;
+  -o-animation: cakeOut 4s ease-in 0s;
+}
+.background .enter_animation#curtain {
+  display: block;
+}
+.background .enter_animation#curtain > div {
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 50% 100%;
+}
+.background .enter_animation#curtain .hobnail1 {
+  animation: hobnail1 2s ease-out 0s;
+  -moz-animation: hobnail1 2s ease-out 0s;
+  -webkit-animation: hobnail1 2s ease-out 0s;
+  -ms-animation: hobnail1 2s ease-out 0s;
+  -o-animation: hobnail1 2s ease-out 0s;
+}
+.background .enter_animation#curtain .hobnail2 {
+  animation: hobnail2 2s ease-out 0s;
+  -moz-animation: hobnail2 2s ease-out 0s;
+  -webkit-animation: hobnail2 2s ease-out 0s;
+  -ms-animation: hobnail2 2s ease-out 0s;
+  -o-animation: hobnail2 2s ease-out 0s;
+}
+.background .enter_animation#curtain .pole1 {
+  animation: pole1 2s ease-out 0s;
+  -moz-animation: pole1 2s ease-out 0s;
+  -webkit-animation: pole1 2s ease-out 0s;
+  -ms-animation: pole1 2s ease-out 0s;
+  -o-animation: pole1 2s ease-out 0s;
+}
+.background .enter_animation#curtain .pole2 {
+  animation: pole2 2s ease-out 0s;
+  -moz-animation: pole2 2s ease-out 0s;
+  -webkit-animation: pole2 2s ease-out 0s;
+  -ms-animation: pole2 2s ease-out 0s;
+  -o-animation: pole2 2s ease-out 0s;
+}
+.background .enter_animation#curtain .pole {
+  animation: pole 3s ease-out 0s;
+  -moz-animation: pole 3s ease-out 0s;
+  -webkit-animation: pole 3s ease-out 0s;
+  -ms-animation: pole 3s ease-out 0s;
+  -o-animation: pole 3s ease-out 0s;
+}
+.background .enter_animation#curtain .curtain {
+  animation: pole 4.2s ease-out 0s;
+  -moz-animation: pole 4.2s ease-out 0s;
+  -webkit-animation: pole 4.2s ease-out 0s;
+  -ms-animation: pole 4.2s ease-out 0s;
+  -o-animation: pole 4.2s ease-out 0s;
+}
+.background .enter_animation#curtain .word {
+  animation: pole 6s ease-out 0s;
+  -moz-animation: pole 6s ease-out 0s;
+  -webkit-animation: pole 6s ease-out 0s;
+  -ms-animation: pole 6s ease-out 0s;
+  -o-animation: pole 6s ease-out 0s;
+}
