@@ -319,7 +319,7 @@ body {
   width: 57%;
   height: 69%;
   position: absolute;
-  bottom: 23%;
+  bottom: 24.5%;
   right: 8%;
   background-image: url("img/scene2_building.png");
   background-repeat: no-repeat;
@@ -366,7 +366,7 @@ body {
   width: 77%;
   height: 70%;
   position: absolute;
-  bottom: 23%;
+  bottom: 24.5%;
   right: 10%;
   background-image: url("img/scene3_hospital.png");
   background-repeat: no-repeat;
