@@ -77,17 +77,16 @@ function GIFin(location){
 			update();
 			drawPic();
 		},1000/15);
-	}
-
-	loop();
-
-	function drawPic() {
 		setTimeout(function(){
 			clearInterval(Obj.flagStay);
 			context.clearRect(0, 0, canvas.width,canvas.height);
 			context.drawImage(IMG[17],location * WIDTH ,0,HEIGHT / 1.5, HEIGHT);
 		},6000);
-		context.clearRect(0, 0, canvas.width,canvas.height);
+	}
+
+	loop();
+
+	function drawPic() {
 		context.drawImage(IMG[i], location * WIDTH, 0, HEIGHT / 1.5, HEIGHT);
 	}
 
